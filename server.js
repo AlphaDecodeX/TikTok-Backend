@@ -5,7 +5,7 @@ import Videos from "./dbModel.js"
 
 // App config
 const app = express();
-const port = 9001;
+const port = 9000;
 
 // Password --> bOAXX2MBeS22AtRK
 // Middle wares
