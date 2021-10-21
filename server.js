@@ -2,6 +2,7 @@ import express from "express"
 import mongoose from "mongoose"
 import Data from "./data.js";
 import Videos from "./dbModel.js"
+import Cors from "cors";
 
 // App config
 const app = express();
@@ -10,6 +11,7 @@ const port = process.env.PORT || 9000;
 // Password --> bOAXX2MBeS22AtRK
 // Middle wares
 app.use(express.json());
+app.use(Cors());
 app.use((req, res, next) => {
     res.setHeader('Acess-Control-Allow-Origin', '*'),
         res.setHeader('Acess-Control-Allow-Headers', '*'),
