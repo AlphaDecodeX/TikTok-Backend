@@ -10,6 +10,11 @@ const port = 9001;
 // Password --> bOAXX2MBeS22AtRK
 // Middle wares
 app.use(express.json());
+app.use((req, res, next) => {
+    res.setHeader('Acess-Control-Allow-Origin', '*'),
+        res.setHeader('Acess-Control-Allow-Headers', '*'),
+        next()
+})
 // DB Config
 const connection_url = "mongodb+srv://admin:bOAXX2MBeS22AtRK@cluster0.vhajl.mongodb.net/tiktok?retryWrites=true&w=majority";
 
